@@ -10,23 +10,23 @@ bankBalanceElement.innerText = bankBalance + "kr";
 loanElement.innerText = bankLoan + "kr";
 
 const takeLoan = () => {
+  //fail safe, not allowed to have an existing loan
+  if (bankLoan > 0) {
+    alert("You can only take one loan at the time");
+    return;
+  }
+
   const desiredLoan = prompt(
     "Please fill in the desired amount you wish to loan"
   );
 
-  if (parseInt(desiredLoan) && desiredLoan > 0) {
+  if (Number.isInteger(desiredLoan) && desiredLoan > 0) {
     //see if value is a number and a realistic loan e.g
     //not zero or trying to ask for money
 
     //fail safe, not allowed to have an existing loan
     if (desiredLoan > bankBalance * 2) {
       alert("You can only take a loan of twice the money on your bank");
-      return;
-    }
-
-    //fail safe, not allowed to have an existing loan
-    if (bankLoan > 0) {
-      alert("You can only take one loan at the time");
       return;
     }
 

@@ -29,7 +29,7 @@ const transferToBank = () => {
   //depended that other operation uses parseInt
   //due to how java script adds element as to a string 
   //parsing in advance is close to pointless
-  if (!parseInt(transferSum)) {
+  if (!Number.isInteger(transferSum) || transferSum <= 0) {
     alert(`${transferSum} is not a valid numeric digit`);
     return;
   }
