@@ -20,7 +20,7 @@ const takeLoan = () => {
     "Please fill in the desired amount you wish to loan"
   );
 
-  if (Number.isInteger(desiredLoan) && desiredLoan > 0) {
+  if (!isNaN(desiredLoan) && desiredLoan > 0) {
     //see if value is a number and a realistic loan e.g
     //not zero or trying to ask for money
 

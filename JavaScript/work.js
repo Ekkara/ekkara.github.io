@@ -1,4 +1,5 @@
 import {bankMod} from "./bank.js";
+//import * as app from "./bank.js";
 const walletBalanceElement = document.getElementById("walletBalance");
 const transferToBankButton = document.getElementById("transferToBankButton");
 const workButton = document.getElementById("workButton");
@@ -29,7 +30,7 @@ const transferToBank = () => {
   //depended that other operation uses parseInt
   //due to how java script adds element as to a string 
   //parsing in advance is close to pointless
-  if (!Number.isInteger(transferSum) || transferSum <= 0) {
+  if (isNaN(transferSum) || transferSum <= 0) {
     alert(`${transferSum} is not a valid numeric digit`);
     return;
   }
