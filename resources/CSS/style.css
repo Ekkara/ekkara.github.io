@@ -1,0 +1,103 @@
+#mainContainer {
+  width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+h4{
+  margin-bottom: 0.3em;
+}
+.columnContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subContainer {
+  position: relative;
+  margin: auto;
+  margin-bottom: 1em;
+  width: calc(50% - 20px);
+  background-color: rgb(189, 189, 189);
+  
+  min-height: 130px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+#store {
+  width: calc(100% - 20px);
+}
+#storeInfo {
+  position: relative;
+  float: left;
+  width: 60%;
+  min-height: 10px;
+}
+#storeSelect {
+  position: relative;
+  float: right;
+  width: 40%;
+  min-height: 10px;
+}
+
+.right {
+  padding-right: 1em;
+  padding-top: 0.5em;
+
+  text-align: right;
+  float: right;
+  min-width: 40%;
+}
+.left {
+  padding-left: 1em;
+  padding-top: 0.5em;
+
+  text-align: left;
+  float: left;
+  min-width: 40%;
+}
+
+.buttonHolder {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* thank you cнŝdk for the solution to only effect visible objects
+ https://stackoverflow.com/questions/46786663/is-there-a-selector-to-exclude-display-none-elements*/
+*:not([style*="display: none"]) button{ 
+  margin: auto;
+  min-width: 100px;
+  margin-bottom: 1em;
+}
+.hideIfNoLoan{
+  display: none;/*assign none so they are hidden from start*/
+}
+#storeInfoRow{
+  display: flex;
+  flex-direction: row;
+}
+#storeSelect{
+  
+  border-width: 0 0.2em 0 0;
+  border-color: black;
+  border-style: solid;
+  margin-right: 1em;
+}
+.sameHeight{
+  display: flex; /*why does flex change the order of the elements? hence the reverse below*/
+}
+select{
+  margin-right: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+#PCImage{
+  margin-left: 1em;
+  width: 100%;
+}

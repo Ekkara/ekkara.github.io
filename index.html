@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/CSS/style.css" />
+    <title>Assignment 1</title>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <h1>Computer store</h1>
+
+      <div class="columnContainer">
+        <div class="subContainer"><!--bank section-->
+          <h2>Bank</h2>
+          <span class="left">Balance</span>
+          <span class="right" id="bankBalance">[default text]</span>
+          <div class="hideIfNoLoan">
+            <span class="left"> Unpaid loans</span>
+            <span class="right" id="bankLoan">[default text]</span>
+          </div>
+          <div class="columnContainer">
+            <div class="buttonHolder">
+              <button id="takeLoanButton">Get a loan</button>
+            </div>
+          </div>
+        </div>
+        <div class="subContainer"><!--work section-->
+          <h2>Work</h2>
+          <span class="left">Wallet</span>
+          <span class="right" id="walletBalance">[default text]</span>
+
+          <div class="columnContainer">
+            <div class="buttonHolder">
+              <button id="transferToBankButton">Transfer to bank</button>
+              <button id="workButton">Work</button>
+              <button id="repayLoanButton" class="hideIfNoLoan">Pay back loan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="">
+      <div class="subContainer" id="store"><!--store section-->
+        <h2>Store</h2>
+        <div class="sameHeight">
+          <div id="storeSelect">
+            <h3>Laptop</h3>
+            <select id="selectPC"></select>
+            <h4>Features:</h4>
+            <ul id="PCSpecs"><li>[default specs]</li></ul>
+          </div>
+          <div id="storeInfo">
+            <h3>Info</h3>
+            <div id="storeInfoRow">
+              <div class="subContainer">
+                <img id="PCImage">
+              </div>
+              <div class="subContainer">
+                <h3 id="PCName">[Default PC Name]</h3>
+                <span id="PCDescription" class="left">[Default details]</span>
+              </div>
+              <div class="subContainer">
+                <h3 id="PCPrice">[Default PC price]</h3>
+                <div class="buttonHolder">
+                  <button id="BuyButton">Buy now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./JavaScript/app.js"></script>
+  </body>
+</html>
