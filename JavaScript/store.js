@@ -1,3 +1,4 @@
+import {bankMod} from "./bank.js";
 //store base URL
 const source = "https://hickory-quilled-actress.glitch.me";
 

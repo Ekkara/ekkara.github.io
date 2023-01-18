@@ -1,3 +1,4 @@
+import {bankMod} from "./bank.js";
 const walletBalanceElement = document.getElementById("walletBalance");
 const transferToBankButton = document.getElementById("transferToBankButton");
 const workButton = document.getElementById("workButton");
